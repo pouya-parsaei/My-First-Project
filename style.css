@@ -1,0 +1,81 @@
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        body {
+            background-image: url(multimedia/img/background.jpg);
+            background-size: cover;
+        }
+        
+        .img-fluid {
+            vertical-align: -9px;
+        }
+        
+        .back-blue {
+            background-color: #0d6efd!important;
+        }
+        
+        .color-white {
+            color: white!important;
+        }
+        
+        .blue-color {
+            color: #1c768f!important;
+        }
+        
+        .back_white {
+            background-color: white!important;
+        }
+        
+        .titr {
+            margin-top: 250px;
+            font: 900 50px'Roboto', sans-serif;
+            text-align: center;
+            text-shadow: 5px 5px 5px black;
+        }
+        
+        .no_margin {
+            margin-top: 0;
+        }
+        
+        .search_button {
+            background-color: #0d6efd!important;
+            color: white!important;
+            border-radius: 20px;
+            border-color: #0d6efd!important;
+        }
+        
+        .dropdown_border {
+            border-right: solid rgba(0, 0, 0, .55);
+            border-width: 1px;
+        }
+        
+        .search_button2 {
+            color: #0d6efd;
+            border-color: #0d6efd!important;
+            border-radius: 20px;
+        }
+        
+        .box_shadow {
+            box-shadow: 0px 0px 5px 10px rgb(233 230 230);
+        }
+        
+        .user_button {
+            min-width: fit-content;
+        }
+        
+        .top_menu {
+            margin-left: 200px!important;
+        }
+        
+        .w-50,
+        .p-3,
+        .position-absolute,
+        .top-0,
+        .start-50,
+        .translate-middle-x,
+        .position-fixed {
+            display: none;
+        }
+        #resizable { width: 150px; height: 150px; padding: 0.5em; }
+        #resizable h3 { text-align: center; margin: 0; }
