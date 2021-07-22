@@ -24,8 +24,7 @@
 
 <body class="position-relative">
 
-
-
+    <!-- Top Header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light back-blue">
         <div class="container-fluid">
             <a class="navbar-brand color-white animate__animated animate__lightSpeedInLeft" href="#">Welcome to Ajrnil |
@@ -53,14 +52,59 @@
             Sign up |</button>
 
 
-        <button type="button" class="btn btn-primary user_button"><i class="fas fa-sign-in-alt"></i> Login</button>
+        <button type="button" class="btn btn-primary user_button" id="loginbtn"><i class="fas fa-sign-in-alt"></i>
+            Login</button>
 
     </nav>
 
 
 
+
     </div>
     </div>
+
+    <!-- Sign-In Form -->
+    <div class="w-25 p-3 position-fixed position-absolute top-30 end-0 rounded shadow sign-in-form"
+        style="background-color: #eee;">
+        <form>
+            <button class="btn btn-primary position-absolute top-0 end-0" type="button"
+                id="close-btn-sign-in-form">X</button>
+
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control email" id="inputEmail3">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            stay in
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="sign-in-btn">Sign in</button>
+            <button class="btn btn-primary" type="button" id="cancel-btn-sign-in-form">Cancel</button>
+
+
+        </form>
+    </div>
+
+
+
+
+
+    <!-- Top Menu -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light back_white">
         <div class="container-fluid">
 
@@ -119,6 +163,8 @@
             </div>
         </div>
     </nav>
+
+    <!-- Slider -->
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -161,8 +207,11 @@
         </button>
     </div>
 
+    <!-- Main -->
     <p class="h1 titr color-white animate__animated animate__bounceInDown">Discover</p>
     <p class="h1 titr no_margin color-white animate__animated animate__bounceInRight">Your Property Kuwait City</p>
+
+    <!-- DropDown -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light box_shadow fix">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -214,7 +263,9 @@
             </div>
         </div>
     </nav>
-    <div class="w-50 p-3 position-absolute top-0 start-50 translate-middle-x position-fixed signupform" 
+
+    <!-- Sign-Up Form -->
+    <div class="w-50 p-3 position-absolute top-0 start-50 translate-middle-x position-fixed rounded shadow signupform"
         style="background-color: #eee;">
         <div class="btn-group " role="group " aria-label="Basic example ">
             <button type="button " class="btn btn-primary ">_</button>
@@ -223,15 +274,15 @@
         <form class="row g-3 ">
             <div class="col-md-6 ">
                 <label for="inputEmail4 " class="form-label ">Email</label>
-                <input type="email " class="form-control " id="inputEmail4 ">
+                <input type="email " class="form-control sign-up-email" id="inputEmail4 ">
             </div>
             <div class="col-md-6 ">
                 <label for="inputPassword4 " class="form-label ">Username</label>
-                <input type="text " class="form-control " id="inputPassword4 ">
+                <input type="text " class="form-control sign-up-username" id="inputPassword4 ">
             </div>
             <div class="col-12 ">
                 <label for="inputAddress " class="form-label ">Password</label>
-                <input type="password " class="form-control " id="inputAddress ">
+                <input type="password " class="form-control sign-up-password" id="inputAddress ">
             </div>
             <div class="col-12 ">
                 <label for="inputAddress2 " class="form-label">Re-Enter Password</label>
@@ -239,7 +290,7 @@
             </div>
             <div class="col-md-6 ">
                 <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity ">
+                <input type="text" class="form-control sign-up-city" id="inputCity ">
             </div>
             <div class="col-md-4 ">
                 <label for="inputState" class="form-label">State</label>
@@ -261,16 +312,20 @@
                 </div>
             </div>
             <div class="col-12 ">
-                <button type="button" class="btn btn-primary ok">Sign up</button>
+                <button type="button" class="btn btn-primary" id="sign-up-btn">Sign up</button>
                 <button type="button" class="btn btn-primary" id="cancelbtn">Cancel</button>
 
             </div>
         </form>
+
+
     </div>
 
 
 
 
+
+    <!-- Gallery -->
     <div class="container">
         <div class="row">
             <div class="col">
@@ -294,8 +349,6 @@
                 </a>
             </div>
         </div>
-
-        
 
     </div>
 
@@ -321,12 +374,57 @@
 
 
     <script>
+        var loginbtn = $('#loginbtn');
+        var signUpForm = $('.signupform');
+        var result = $('.result');
+        var signUpBtn = $('#sign-up-btn');
+        var inputemail = $('.sign-up-email');
+        var inputusername = $('.sign-up-username');
+        var signInForm = $('.sign-in-form');
+        var cancelBtnLogin = $('#cancel-btn-sign-in-form');
+        var closeBtnSignin = $('#close-btn-sign-in-form');
+
+
+        $(window).keyup(function (event) {
+            if (event.keyCode === 27) {
+                signInForm.fadeOut();
+            }
+
+        })
+        closeBtnSignin.click(function (event) {
+            signInForm.fadeOut(100);
+        })
+        cancelBtnLogin.click(function (event) {
+            signInForm.fadeOut(100);
+        })
+        loginbtn.click(function (event) {
+            signInForm.fadeIn(500);
+        })
+
+        signUpBtn.click(function () {
+            $.ajax({
+                url: 'handler.php',
+                method: 'post',
+                data: { data: inputemail.val() },
+                success: function (response) {
+                    Swal.fire(
+                        'Well Done!',
+                        response.concat(' registered'),
+                        'succeccfully'
+                    )
+                },
+                error: function (response) {
+                    result.html(response);
+
+                }
+            })
+        })
         $("#signupbutton").click(function (event) {
 
             $('.signupform').fadeIn(500);
         })
         $('#cancelbtn').click(function (event) {
-            
+
             $('.signupform').fadeOut();
         })
         $('#closeformbtn').click(function (event) {
@@ -338,18 +436,52 @@
             }
 
         })
+
     </script>
     <script>
         $(document).ready(function () {
             $('.slider').bxSlider();
         });
-        $(".ok").click(function (){
-            Swal.fire(
-  'Well Done!',
-  'Confirmation Email Sent!',
-  'success'
-)
+        $(".ok").click(function () {
+
         })
+    </script>
+    <script>
+            ;
+        $(document).ready(function () {
+            var inputEmail = $('.email');
+            var inputUsername = $('.sign-up-username');
+            var inputpassword = $('.sign-up-password');
+            var inputcity = $('.sign-up-city');
+            var userdata = [inputEmail, inputUsername, inputpassword, inputcity];
+            var signInBtn = $('#sign-in-btn');
+            signInBtn.click(function () {
+                $.ajax({
+                    url: 'sign-in-tries.php',
+                    method: 'post',
+                    data: { data: inputEmail.val() },
+                    success: function (response) {
+                        Swal.fire(
+                            'Good job!',
+                            response,
+                            'success'
+                        )
+                    },
+                    error: function (response) {
+
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong!',
+                            footer: '<a href="">Why do I have this issue?</a>'
+                        })
+                    }
+                })
+
+
+            })
+        })
+
     </script>
 </body>
 
